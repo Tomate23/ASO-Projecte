@@ -92,17 +92,3 @@ config.vm.provision "shell", inline: "sudo debconf-set-selections <<< \"mysql-se
 ~~~
 config.vm.provision "shell", inline: "sudo apt-get install -qq mysql-server"
 ~~~
-
-
-
-
-
-
-
-
-
-
-
-
-
-
