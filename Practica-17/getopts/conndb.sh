@@ -47,6 +47,8 @@ while getopts ":u:h:p:t" opt; do # The option -t in the loop condition does not 
             ;;
         t)
             check=1
+            # this option check the connection 
+            echo -e "\e[32m We have connection!\e[0m"
             ;;
         :)
             echo -e "\e[97;41mERROR:\e[0m Option \e[97;104m-$OPTARG\e[0m requires an argument"
