@@ -2,7 +2,6 @@
 ---
 > Asciinema recording link **<https://asciinema.org/a/AdF5N7XrAu6MOxqauloNGzafp>**
 
-> Asciinema recording link **<>**
 ---
 > This script will allow us **Desable**, **Remove** o **Create a backup of home directory** of a user that we specify. 
 
@@ -100,3 +99,6 @@ if [ ! -d /home/$1 ]; then # id not(!) existing directory(-d) /home/login ($2 is
 # sudo ./18-disable-user.sh -a u3
 # sudo ls -la /archives
 ~~~
+
+## Explanation 
+the **18-Disable-User-Fancy.sh** is for an experiment, don´t consider this script. The good one, is the ***18-Disable-User.sh***
