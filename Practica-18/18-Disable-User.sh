@@ -28,6 +28,10 @@ usage() {
     echo '  -a  Creates an archive of the home directory associated with the account(s).' >&2
     echo -e "\n"
     echo -e "\e[0m"
+    
+    #Display the current users in the system 
+    echo -e "These are the current users in your system >\n"
+    getent passwd {1000..2000}
     exit 1
 }
 
