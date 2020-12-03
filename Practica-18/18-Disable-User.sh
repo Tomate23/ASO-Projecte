@@ -67,6 +67,11 @@ checkUser() {
         echo "User name > $username"
         echo -e "\e[97;41mERROR:\e[0m This user does not exist"
         echo -e "\n"
+	#Display the current users in the system 
+    	echo -e "### These are the current users in your system ###"
+    	echo -e "\e[93m"
+    	getent passwd {1000..2000}
+    	echo -e "\e[0m"
         exit 1
     fi
 }
