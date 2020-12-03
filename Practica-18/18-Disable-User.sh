@@ -140,7 +140,7 @@ while getopts ":d:r:a:" opt; do
             echo -e "\e[104mDisabling user >\e[0m $userDISABLE"
             echo -e "\n"
             #check before disable the user 
-            echo "--> \e[40;38;5;82mCheck before >\e[0m $(cat /etc/shadow | grep $userDISABLE)"
+            echo -e "--> \e[40;38;5;82mCheck before >\e[0m $(cat /etc/shadow | grep $userDISABLE)"
             echo -e "\n"
             sleep 3
             usermod -L $userDISABLE
@@ -151,7 +151,7 @@ while getopts ":d:r:a:" opt; do
                 echo -e "\n"
                 #check the exclamation on the user info
                 echo -e 'Verification in /etc/shadow directory\n'
-                echo "--> \e[40;38;5;82mCheck after >\e[0m $(cat /etc/shadow | grep $userDISABLE)"
+                echo -e "--> \e[40;38;5;82mCheck after >\e[0m $(cat /etc/shadow | grep $userDISABLE)"
             else
                 echo "Something went wrong: couldn't disable this user > $userDISABLE"
                 exit 1
