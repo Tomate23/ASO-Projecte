@@ -104,3 +104,5 @@ if [ ! -d /home/$1 ]; then # id not(!) existing directory(-d) /home/login ($2 is
 
 ## Explanation 
 the **18-Disable-User-Fancy.sh** is for an experiment, don´t consider this script. The good one, is the ***18-Disable-User.sh***
+
+(12/3/2020) I have made changes in the code (little correction2) because there were few things related to the `echo` command and the **-e** option of this command 
