@@ -30,20 +30,30 @@ fi
 # Usage function
 usage() {
   echo -e "Usage: $0 FILENAME ..."
-  echo -e "Files in current directory >>\n"
+  echo -e "\n"
+  echo -e "### Files in current directory ###\n"
   ls
+  echo -e "\n"
 }
+
 # This funtion will read the file that we need to analyze
 # if the file is not provided or a error will be displayed
 # exit with a status of 1
 
 openFile() {
-# Supposing the file is in the same directory where is the script
-if [[ $1 -eq 0 ]]
+# Supposing the file is in the same directory where is the script o the user provide a route
+if [[ $1 -eq 0 ]] >> /dev/null 2>&1
 then
   echo -e "\e[97;41mERROR:\e[0m You have to specify a file to be in order to be analyze"
+  echo -e "\n"
   usage
   exit 1
+  
+elif ! [[ -e $1 ]] 
+then
+  echo -e "Cannot open log file: $1\n"
+  exit 1
+  
 else
   file=$1
   while IFS= read -r line # read (-r) explain later
