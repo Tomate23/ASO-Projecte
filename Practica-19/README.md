@@ -1,7 +1,7 @@
 # Parsing Log files / Detecting Possible attacks
 ---
 ### Recording Links 
-> Asciinema recording link **<>**
+> Asciinema recording link **<https://asciinema.org/a/377588>**
 ---
 ### Explanation
 
