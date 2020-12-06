@@ -109,9 +109,10 @@ else
   # We can now do the same for the second type of login, one with a valid username but incorrect password.
   # {Apr 15 19:56:55 spark sshd[16872]: "pam_unix(sshd:auth): authentication failure"; logname= uid=0 euid=0 tty=ssh ruser= rhost=183.3.202.111 user=root}
   echo -e "==> \e[96;4mVALID USERS (INCORRECT PASSWORDS) IP ADDRESS COUNT()\e[0m"
-  #grep 'pam_unix(sshd:auth): authentication failure;' $file | awk '{print $14}' | cut -d"=" -f2 >>IPs.txt
   grep 'pam_unix(sshd:auth): authentication failure;' $file | awk '{print $14}' | cut -d"=" -f2 | sort | uniq -c | sort -rn
   echo -e "\n"
+  
+  
   # at this paint we extracted the IP addresses that made unauthorized SSH login attempts.	
   # we'll count only the failed ones.
   # Now we have to had the IPs sorted and ranked
